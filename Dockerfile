@@ -19,6 +19,7 @@ COPY *.go ./
 # compile application into root
 RUN go build -o /birdopedia
 
+
 EXPOSE 8080
 
 CMD ["/birdopedia"]
