@@ -10,7 +10,7 @@ go test -v ./...
 # KUBECONFIG="/home/lucas/.kube/config"
 # echo $KUBECONFIG
 
-cp /home/lucas/.kube/config $HOME/.kube/config
+sudo cp /home/lucas/.kube/config $HOME/.kube/config
 
 # check kube config
 kubectl config view
