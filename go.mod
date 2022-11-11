@@ -1,4 +1,4 @@
-module birdpedoia
+module birdopedia
 
 go 1.13
 
