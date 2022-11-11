@@ -7,6 +7,9 @@ echo "script started"
 # run tests
 go test -v ./...
 
+# check kube config
+kubectl config view
+
 # kubernetes deployment
 kubectl apply -f kubernetes-deployment.yaml
 echo "script finished"
