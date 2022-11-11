@@ -5,12 +5,12 @@ echo "script started"
 # go test -v ./...
 
 # run tests
-go test -v ./...
+#go test -v ./...
 
 # KUBECONFIG="/home/lucas/.kube/config"
 # echo $KUBECONFIG
 
-kubectl proxy --port=8080
+kubectl config get-contexts
 
 # check kube config
 kubectl config view
