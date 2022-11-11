@@ -7,16 +7,10 @@ echo "script started"
 # run tests
 go test -v ./...
 
-KUBECONFIG="/home/lucas/.kube/config"
-echo $KUBECONFIG
+# KUBECONFIG="/home/lucas/.kube/config"
+# echo $KUBECONFIG
 
-export $KUBECONFIG
-
-kubectl cluster-info
-
-
-#kubectl config --kubeconfig $KUBECONFIG
-#echo $HOME/.kube/config
+cp /home/lucas/.kube/config $HOME/.kube/config
 
 # check kube config
 kubectl config view
