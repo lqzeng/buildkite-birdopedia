@@ -10,7 +10,8 @@ go test -v ./...
 KUBECONFIG="/home/lucas/.kube/config"
 echo $KUBECONFIG
 
-kubectl config --kubeconfig $KUBECONFIG
+kubectl config current-context
+#kubectl config --kubeconfig $KUBECONFIG
 #echo $HOME/.kube/config
 
 # check kube config
