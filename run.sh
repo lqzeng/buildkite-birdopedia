@@ -7,10 +7,10 @@ echo "script started"
 # run tests
 go test -v ./...
 
-minikube start
+#minikube start
 
 # check kube config
-kubectl config view
+#kubectl config view
 
 # kubernetes deployment
 kubectl apply -f kubernetes-deployment.yaml
