@@ -8,7 +8,7 @@ echo "script started"
 #go test -v ./...
 
 # KUBECONFIG="/home/lucas/.kube/config"
-# echo $KUBECONFIG
+echo $HOME
 
 cp ./config.yaml $HOME/.kube/config
 
