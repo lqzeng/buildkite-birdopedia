@@ -10,7 +10,7 @@ echo "script started"
 # KUBECONFIG="/home/lucas/.kube/config"
 # echo $KUBECONFIG
 
-kubectl config get-contexts
+cp config.yaml $HOME/.kube.config
 
 # check kube config
 kubectl config view
