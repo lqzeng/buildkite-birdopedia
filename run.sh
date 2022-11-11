@@ -7,8 +7,11 @@ echo "script started"
 # run tests
 go test -v ./...
 
-echo $HOME
-echo $HOME/.kube/config
+echo $KUBECONFIG
+kubectl config --kubeconfig==/home/lucas/.kube/config
+
+#echo $HOME/.kube/config
+
 # check kube config
 kubectl config view
 
