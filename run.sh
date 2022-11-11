@@ -10,7 +10,7 @@ go test -v ./...
 # KUBECONFIG="/home/lucas/.kube/config"
 # echo $KUBECONFIG
 
-sudo cp /home/lucas/.kube/config $HOME/.kube/config
+minikube start --vm-driver=docker
 
 # check kube config
 kubectl config view
