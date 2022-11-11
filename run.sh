@@ -10,7 +10,7 @@ go test -v ./...
 # KUBECONFIG="/home/lucas/.kube/config"
 # echo $KUBECONFIG
 
-minikube start --vm-driver=docker
+kubectl proxy --port=8080
 
 # check kube config
 kubectl config view
