@@ -7,7 +7,7 @@ echo "script started"
 # run tests
 go test -v ./...
 
-$KUBECONFIG = /home/lucas/.kube/config
+KUBECONFIG = /home/lucas/.kube/config
 echo $KUBECONFIG
 
 #echo $HOME/.kube/config
