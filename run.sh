@@ -7,6 +7,8 @@ echo "script started"
 # run tests
 go test -v ./...
 
+echo $HOME
+echo $HOME/.kube/config
 # check kube config
 kubectl config view
 
