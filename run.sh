@@ -12,6 +12,8 @@ go test -v ./...
 # check kube config
 #kubectl config view
 
+kubectl get all
+
 # kubernetes deployment
 kubectl apply -f kubernetes-deployment.yaml
 echo "script finished"
