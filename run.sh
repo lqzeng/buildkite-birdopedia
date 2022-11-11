@@ -10,7 +10,7 @@ go test -v ./...
 KUBECONFIG="/home/lucas/.kube/config"
 echo $KUBECONFIG
 
-kubectl config current-context
+kubectl config set-context $KUBECONFIG
 #kubectl config --kubeconfig $KUBECONFIG
 #echo $HOME/.kube/config
 
