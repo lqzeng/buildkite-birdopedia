@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-bird
+spec:
+  selector:
+    matchLabels:
+      run: load-balancer-example
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: load-balancer-example
+    spec:
+      containers:
+        - name: hello-bird
+          image: docker.io/elmanzeeguy/birdopedia
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-bird-service
+spec:
+  ports:
+  - nodePort: 31070
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: load-balancer-example
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
