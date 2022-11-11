@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tutorial
+  labels:
+    app: tutorial
+spec:
+  # TODO: replace with a value that fits your application
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tutorial
+  template:
+    metadata:
+      labels:
+        app: tutorial
+    spec:
+      containers:
+        - name: app
+          image: "${DOCKER_IMAGE}"
+          ports:
+            # TODO: replace with the correct port for your application
+            - containerPort: 3000
