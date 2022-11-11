@@ -7,8 +7,8 @@ echo "script started"
 # run tests
 go test -v ./...
 
+$KUBECONFIG = /home/lucas/.kube/config
 echo $KUBECONFIG
-kubectl config --kubeconfig==/home/lucas/.kube/config
 
 #echo $HOME/.kube/config
 
